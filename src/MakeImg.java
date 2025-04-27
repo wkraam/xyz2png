@@ -8,6 +8,7 @@ import java.nio.file.Path;
 import java.util.Scanner;
 
 public class MakeImg implements Runnable{
+    int zeroOffset = 10; // a.k.a. level of water
     Path path;
     public MakeImg() {
 
@@ -27,7 +28,7 @@ public class MakeImg implements Runnable{
         //read the XYZ file
         File xyzFile = new File(path.toString());
         String filename = xyzFile.getName();
-        int rowCount=25000000;
+        int rowCount=25000000; //total rows in XYZ file
         Scanner sc = null;
         try {
             sc = new Scanner(xyzFile);
@@ -37,7 +38,7 @@ public class MakeImg implements Runnable{
         float[] heights = new float[rowCount];
         for (int i = 0; i < rowCount; i++) {
             String line = sc.nextLine().split(" ")[2];
-            heights[i] = Float.parseFloat(line);
+            heights[i] = Float.parseFloat(line)+zeroOffset;
         }
         sc.close();
         System.out.println("file is read in with "+rowCount+" rows");
@@ -48,9 +49,9 @@ public class MakeImg implements Runnable{
         System.out.println("making image");
         int currentRow = 0;
         BufferedImage buffImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-        for (int x = 0; x < width; x++) {
+        for (int x = 0; x < height; x++) {
             //System.out.println("starting row"+x);
-            for (int y = 0; y < height; y++) {
+            for (int y = 0; y < width; y++) {
                 float currentHeight = heights[currentRow];
                 currentRow++;
                 if (currentHeight <= 0)currentHeight=0;
@@ -59,7 +60,7 @@ public class MakeImg implements Runnable{
                 //System.out.println("Height: "+currentHeight+"\tcalculated RGB: "+g);
                 Color tempRGB = new Color(g, g, g);
                 int rgb = tempRGB.getRGB();
-                buffImg.setRGB(x, y, rgb);
+                buffImg.setRGB(y, x, rgb);
             }
         }
 

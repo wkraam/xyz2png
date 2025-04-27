@@ -63,6 +63,10 @@ public class Main {
                 }*/
             }else{
                 System.out.println("is file");
+                filePaths.add(Paths.get(inputFileName.getAbsolutePath()));
+                destFolder = inputFileName.getAbsolutePath()+"\\..";
+                System.out.println(filePaths.toString());
+                System.out.println(getDestFolder());
                 MakeImg makeImg = new MakeImg();
                 makeImg.run();
             }
