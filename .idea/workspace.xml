@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df4aacb9-c226-4c06-8780-672e87e91d98" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MakeImg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xyz2png.iml" afterDir="false" />
-    </list>
+    <list default="true" id="df4aacb9-c226-4c06-8780-672e87e91d98" name="Changes" comment="first and working w multithreading" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +16,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -76,8 +67,16 @@
       <updated>1745665735516</updated>
       <workItem from="1745665736796" duration="3098000" />
       <workItem from="1745668982691" duration="9843000" />
-      <workItem from="1745733998465" duration="4183000" />
+      <workItem from="1745733998465" duration="4494000" />
     </task>
+    <task id="LOCAL-00001" summary="first and working w multithreading">
+      <created>1745742180421</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745742180421</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +92,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first and working w multithreading" />
+    <option name="LAST_COMMIT_MESSAGE" value="first and working w multithreading" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
